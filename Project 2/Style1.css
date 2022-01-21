@@ -1,0 +1,367 @@
+body{
+    background-color: lemonchiffon;
+}
+h2{
+    color:olivedrab;
+    
+}
+h6{
+    color:khaki;
+    font-size:large;
+}
+.starter{
+    background-color: white;
+}
+.o{
+    float:left;
+    margin-left:0px;
+    width: 50%;
+    display: block;
+}
+
+.t{
+    margin-left:10%;
+    margin-right:20px;
+    float:left;
+    width:40%;
+    animation-name:icon;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+    animation-delay: 2s;
+    margin-top:2%;
+}
+.start{
+    width:100px;
+    height:100px;
+    position:relative; 
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-delay: 2s;
+}
+.beginning{
+    position:relative;
+    animation-name: new;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    animation-delay: 2s;
+}
+@keyframes example{
+    0%  {top:0px}
+    25% {top:35px}
+    50% {top:55px}
+    75% {top:35px}
+    100% {top:0px}
+}
+@keyframes new{
+    0%  {top:0px}
+    25% {top:-35px}
+    50% {top:-55px}
+    75% {top:-35px}
+    100% {top:0px}
+}
+@keyframes icon{
+    from {transform:scale(1);} 
+    to {transform:scale(1.5);}
+}
+.intro{
+    width:100%;
+    position: relative;
+    margin-left: 9%;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width:100%;
+     float:left; 
+    /* flex-flow: row wrap; */
+    /* height: 10px; */
+    /* margin-left: 2%; */
+    margin-top:4%;
+    margin-left: 8%;
+  
+}
+/* slideshow */
+.slidewrapper{
+  overflow: hidden;
+  display: inline; 
+  /* margin-top: 30%; */
+ 
+}
+
+.slide-left1, 
+.slide-left2, 
+.slide-left3 {
+	position: absolute;
+  display: block;
+	/* top: 2em; */
+  margin-bottom: 0%;
+  width: 80%;
+  margin-left: 0%; 
+  font-size: 2em;
+margin-top: 3.3%;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+
+.slide-left1 {
+
+  animation: slide-left 10s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  display: block;
+  animation-name: anim-1;
+  background-color: turquoise;
+  
+  
+}
+.slide-left2{
+  animation: slide-left 10s;
+ background-color: salmon; 
+  position: absolute;
+  display: block;
+  animation-name: anim-2;
+  animation-iteration-count: infinite;
+  /* animation-delay: 20s; */
+  
+
+}
+.slide-left3{
+  animation: slide-left 10s;
+  background-color: springgreen; 
+  position: absolute;
+  display: block;
+  animation-name: anim-3;
+  animation-iteration-count: infinite;
+  /* animation-delay: 30s; */
+}
+@keyframes anim-1 {
+	0%, 8.3% { left: -80%; opacity: 0; }
+  8.3%,25% { left: 9%; opacity: 1; }
+  33.33%, 100% { left: 80%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -80%; opacity: 0; }
+  41.63%, 58.29% { left: 9%; opacity: 1; }
+  66.66%, 100% { left: 80%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -80%; opacity: 0; }
+  74.96%, 91.62% { left: 9%; opacity: 1; }
+  100% { left: 80%; opacity: 0; }
+}
+/* intro pg */
+.layerbox {
+    position: absolute;
+    top: 40%;
+    left: 16px;
+    border:3px solid white;
+    background-color:grey;
+    width:50%;
+     float:left; 
+    margin:4%;
+    box-shadow:2px 2px pink;
+  }
+  .gradient1 {
+    background-image: linear-gradient(to top, rgba(122, 141, 234, 0.2),rgba(117, 19, 93, 0.73)),url("https://www.backyardboss.net/wp-content/uploads/2020/11/Aglaonema-Acadia-e1606755887118.jpg");
+   width:38%;
+    height:500px;
+    /* position:fixed; */
+    /* background-size:cover; */
+    /* flex-flow:row wrap; */
+    float: left;
+    
+  }
+.layerbox2{
+    position: absolute;
+          top: 40%;
+          left: 16px;
+          border:1px solid lightgreen;
+          box-shadow:2px 2px pink;
+          width:29%;
+          height:60px;
+          /* float:left; */
+          /* margin:4%; */
+
+}
+.container2{
+    border:1px solid lightgreen;
+    background-image:linear-gradient(to top, rgba(137, 215, 146, 0.2),rgba(200, 225, 122, 0.8));
+    color:olivedrab;
+     width:38%;
+      float:left;
+      /* flex-flow: row wrap; */
+      margin-left:70px;
+      padding:140px;
+      
+    }
+    .bigbox{
+    /* height: 50%; */
+    width:100%;
+    
+    }
+    hr{
+        color:olivedrab;
+        width:4px;
+        background-color: paleturquoise;
+    }
+    * {
+        box-sizing: border-box;
+      }
+      
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
+      
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 500px) {
+        .column {
+          width: 100%;
+        }
+      }
+      h3{
+      color:olivedrab;
+      }
+      .textbody{
+      text-align:center;
+      margin-top:2%;
+      }
+      .column a{
+      text-decoration:none;
+      background-color:paleturquoise;
+      padding:3%; 
+      color:black;
+      margin-top: 5%;
+      }
+    /* modal window def */
+  
+
+      /* other modal */
+      .modal-window {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.25);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+      }
+        .modal-window:target {
+          visibility: visible;
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .modal-window > div {
+          width: 400px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 2em;
+          background: white;
+        }
+      .modal-close {
+        color: #aaa;
+        line-height: 50px;
+        /* font-size: 80%; */
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 70px;
+        text-decoration: none;
+      }
+        .modal-close:hover {
+          color: black;
+        }
+      
+      
+      /* Demo Styles */
+      .modal-window a {
+        color: inherit;
+        padding:0%;
+      }
+      
+      .box {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      /* .modal-window {} */
+        .modal-window > div {
+          border-radius: 1rem;
+        }
+      
+      
+      .modal-window div:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+      
+      
+     
+        i {
+          padding-right: 0.3em;
+        }
+      
+      
+     /* end of page */
+              
+  footer {
+    /* padding: 200px; */
+    background: plum;
+    color: white;
+    width:100%;
+    height: 500px;
+    
+  }
+ ul a{
+  text-decoration:none;
+  background-color:paleturquoise;
+  padding:3%; 
+  color:black;
+  margin-top: 5%;
+ }
+ hr{
+   color: white;
+   display:block;
+   width:96%;
+ }
+.last1{
+  /* margin-top: 350px; */
+  line-height: 1px;
+  text-align: center;
+  
+}
+ul{
+  float:left;
+  display:inline;
+  list-style: none;
+  margin-top: 4%;
+  margin-left: 2%; 
+  width: 20%;
+  text-align: center;
+  margin-right: 3%;
+}
+li{
+  margin-top: 3%;
+}
