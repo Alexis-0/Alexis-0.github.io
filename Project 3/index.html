@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="index.css">
+
+
+
+</head>
+
+    <body>
+        
+        <div class="game-container">
+            
+            <div class="header"><h1 class="title"><span class="blink">Guess a number between 1 and 100</span></h1>
+                <h3 class="small-title"><span class="blink">Test your luck!</span></h3> </div>
+            <div class="boxhead">
+                
+                <div class="scorecontainer" ><p>score=10</p>
+                    <span id="score" class="high-score">high-score=</span></div>
+               
+                <div class="box"><button type="reset" id="reset-btn" onclick="clearResult()">Reset me</button></div>
+                
+                <div class="input-number-container">
+                   
+                    <div id="coin"></div>
+                    <input type="text" id="input-num" placeholder="Enter a number"><br>
+                    <button type="submit" id="check-btn" onclick="coinToss()">Check</button><div id="history"></div>
+                    
+
+                  </div>
+                </div>
+            </div>
+        </div>
+        <script >
+
+function clearResult(){
+    document.getElementById("input-num").value = ''
+    document.getElementById("history").value = guess  
+    document.getElementById("score").innerHTML= score
+  }
+
+      // random value generated
+      var y = Math.floor(Math.random() * 101);
+      
+      // counting the number of guesses
+      // made for correct Guess
+       var guess = 1;
+      var score=0;
+      document.getElementById("check-btn").onclick = function(){
+      
+  // number guessed by user	
+  var x = document.getElementById("input-num").value;
+  
+  if(x == y)
+   {   
+       alert("you get a point!");
+       document.getElementById("history").innerHTML= x;
+    
+    //    function scoreIncrement() {
+    
+    score++;
+      document.getElementById("score").innerHTML="High-Score: " + score; 
+  
+ 
+   }
+   else if(x > y) /* if guessed number is greater
+                   than actual number*/ 
+   {    
+       guess++;
+       alert("OOPS SORRY!! TRY A SMALLER NUMBER");document.getElementById("history").innerHTML= x;
+   }
+   else
+   {
+       guess++;
+       alert("OOPS SORRY!! TRY A GREATER NUMBER");document.getElementById("history").innerHTML= x;
+   }
+}
+
+
+</script>
+</body>
+</html>					
+
